@@ -20,4 +20,26 @@ describe('bcrypt hash', () => {
     const isMatch = await cipherUtil.isPasswordValid(password, hash);
     expect(isMatch).toEqual(false);
   });
+
+  it('should make test hash', async () => {
+    let password = '1111';
+    hash = await cipherUtil.encryptToBcrypt(password);
+    console.log(hash);
+
+    password = '2222';
+    hash = await cipherUtil.encryptToBcrypt(password);
+    console.log(hash);
+
+    password = '3333';
+    hash = await cipherUtil.encryptToBcrypt(password);
+    console.log(hash);
+
+    password = '4444';
+    hash = await cipherUtil.encryptToBcrypt(password);
+    console.log(hash);
+
+    password = '5555';
+    hash = await cipherUtil.encryptToBcrypt(password);
+    console.log(hash);
+  });
 });
