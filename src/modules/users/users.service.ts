@@ -24,4 +24,8 @@ export class UsersService {
     const { email, name } = row;
     return { id, email, name };
   }
+
+  async getByEmail(email: string) {
+    return await this.usersRepository.getByEmail(email);
+  }
 }

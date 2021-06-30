@@ -55,4 +55,8 @@ export class UsersRepository {
   getById(id: number): User {
     return this.users.filter((user) => user.id === id)[0];
   }
+
+  async getByEmail(email: string): Promise<User> {
+    return this.users.filter((user) => user.email === email)[0];
+  }
 }
